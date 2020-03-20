@@ -1,4 +1,5 @@
 package at.jku.ssw.app;
+
 import Items.*;
 
 public class Example {
@@ -11,11 +12,25 @@ public class Example {
                 "Nachttrank",
                 darkpotion,
                 spiderLeg);
-        System.out.println(nightpotion.toString());
-        System.out.println(nightpotion.getPrice());
-        System.out.println(nightpotion.getReducedPrice(DiscountRate.HIGH));
-        System.out.println(nightpotion.getReducedPrice());
-        System.out.println(nightpotion.getPower());
-        System.out.println(nightpotion.getCooldown());
+
+
+        print(chives);
+
+        print(spiderLeg);
+
+        print(darkpotion);
+
+        print(nightpotion);
+
+    }
+
+    public static void print(Item item) {
+        System.out.println(item);
+        System.out.println(item.getPrice() + " Geld");
+        System.out.println(item.getPower());
+        System.out.println(item.getCooldown());
+        System.out.println(item.getReducedPrice(DiscountRate.HIGH) + " Geld");
+        System.out.println(item.getReducedPrice() + " Geld");
+        System.out.println();
     }
 }

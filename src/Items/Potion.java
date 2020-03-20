@@ -18,16 +18,16 @@ public class Potion extends Item {
     }
 
     @Override
-    public float getPower(){
-        float sum = 0;
+    public int getPower(){
+        int sum = 0;
         for(Item item : this.items){
             sum+= item.getPower();
         }
         return sum*2;
     }
     @Override
-    public float getCooldown(){
-        float sum = 0;
+    public int getCooldown(){
+        int sum = 0;
         for(Item item: this.items){
             sum += item.getCooldown();
         }
@@ -36,10 +36,11 @@ public class Potion extends Item {
     public String toString(){
         StringBuilder str = new StringBuilder();
         for (Item item : this.items){
-            str.append(item.getName()).append(",");
+            str.append(item.toString()).append(", ");
         }
         //deletes last comma
         str.deleteCharAt(str.length()-1);
-        return "Potion: " + super.toString() + "["+ str + "]";
+        str.deleteCharAt(str.length()-1);
+        return "Potion: " + super.toString() + "[ "+ str + " ]";
     }
 }

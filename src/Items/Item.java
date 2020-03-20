@@ -11,9 +11,9 @@ public abstract class Item implements Priced {
         return this.name;
     }
 
-    public abstract float getPower();
+    public abstract int getPower();
 
-    public abstract float getCooldown();
+    public abstract int getCooldown();
 
     @Override
     public float getDiscountPercent(DiscountRate rate) {
@@ -47,12 +47,12 @@ public abstract class Item implements Priced {
 
     @Override
     public float getReducedPrice(DiscountRate rate) {
-        return this.getPrice() * this.getDiscountPercent(rate);
+        return Math.round(this.getPrice() * (1-this.getDiscountPercent(rate))*100)/(float) 100;
     }
 
     @Override
     public float getReducedPrice() {
-        return this.getPrice() * this.getDiscountPercent();
+        return Math.round(this.getPrice() * (1-this.getDiscountPercent())*100)/ (float) 100;
     }
 
     public String toString() {

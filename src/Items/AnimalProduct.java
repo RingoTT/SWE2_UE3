@@ -11,7 +11,7 @@ public class AnimalProduct extends Resource{
 
 
     public String toString(){
-        return "Items.AnimalProduct: " + super.toString();
+        return "AnimalProduct: " + super.toString();
     }
 
 

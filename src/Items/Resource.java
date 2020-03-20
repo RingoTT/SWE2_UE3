@@ -1,24 +1,24 @@
 package Items;
 
 public abstract class Resource extends Item {
-    float power;
-    float cooldown;
+    private final int power;
+    private final int cooldown;
 
 
-    public Resource(String name, float power, float cooldown) {
+    public Resource(String name, int power, int cooldown) {
         super(name);
         this.power = power;
         this.cooldown = cooldown;
     }
 
     @Override
-    public float getPower(){
+    public int getPower(){
         return this.power;
     }
 
 
     @Override
-    public float getCooldown(){
+    public int getCooldown(){
         return this.cooldown;
     }
 
