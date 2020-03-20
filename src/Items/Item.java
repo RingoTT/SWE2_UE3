@@ -3,31 +3,17 @@ package Items;
 public abstract class Item implements Priced {
 
     final String name;
-    float power;
-    float cooldown;
-
     public Item(String name) {
         this.name = name;
     }
 
-    public Item(String name, float power, float cooldown) {
-        this.name = name;
-        this.power = power;
-        this.cooldown = cooldown;
-    }
-
-    public String getName() {
+    public String getName(){
         return this.name;
     }
 
-    public float getPower() {
-        return this.power;
-    }
+    public abstract float getPower();
 
-    public float getCooldown() {
-        return this.cooldown;
-    }
-
+    public abstract float getCooldown();
 
     @Override
     public float getDiscountPercent(DiscountRate rate) {
