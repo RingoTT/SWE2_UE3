@@ -20,7 +20,9 @@ public class Herb extends Resource {
         return this.cooldown;
     }
 
+
     public String toString() {
         return "Herb: " + super.toString();
     }
+
 }
