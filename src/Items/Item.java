@@ -2,7 +2,7 @@ package Items;
 
 public abstract class Item implements Priced {
 
-    final String name;
+    protected final String name;
 
     public Item(String name) {
         this.name = name;
