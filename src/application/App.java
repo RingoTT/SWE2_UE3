@@ -1,4 +1,4 @@
-package at.jku.ssw.app;
+package application;
 
 import Items.*;
 
