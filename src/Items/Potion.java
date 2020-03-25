@@ -28,11 +28,13 @@ public class Potion extends Item {
 
     @Override
     public int getCooldown(){
-        int sum = 0;
+        int max = 0;
         for(Item item: this.items){
-            sum += item.getCooldown();
+            if(item.getCooldown() > max){
+                max = item.getCooldown();
+            }
         }
-        return sum*2;
+        return max*2;
     }
 
     public String toString() {
