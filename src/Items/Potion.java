@@ -25,6 +25,7 @@ public class Potion extends Item {
         }
         return sum*2;
     }
+
     @Override
     public int getCooldown(){
         int sum = 0;
@@ -33,14 +34,17 @@ public class Potion extends Item {
         }
         return sum*2;
     }
-    public String toString(){
+
+    public String toString() {
+
         StringBuilder str = new StringBuilder();
-        for (Item item : this.items){
+
+        for (Item item : this.items) {
             str.append(item.toString()).append(", ");
         }
         //deletes last comma
-        str.deleteCharAt(str.length()-1);
-        str.deleteCharAt(str.length()-1);
-        return "Potion: " + super.toString() + "[ "+ str + " ]";
+        str.deleteCharAt(str.length() - 1);
+        str.deleteCharAt(str.length() - 1);
+        return "Potion: " + super.toString() + "[ " + str + " ]";
     }
 }
